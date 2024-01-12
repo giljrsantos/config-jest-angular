@@ -9,7 +9,7 @@ Node: 18.16.0
 Package Manager: npm 9.5.1
 ```
 
-Quando você cria algum projeto angular `ng new <NomeProjeto>`, como padrão o `CLI` instala e configuraça as dependências de teste unitário, como o `Jasmine` e o `Karma`
+Quando você cria algum projeto angular `ng new <NomeProjeto>`, como padrão o `CLI` instala e configura as dependências de teste unitário, como o `Jasmine` e o `Karma`
 ```json
   "devDependencies": {
     "@types/jasmine": "~4.3.0",
@@ -53,7 +53,7 @@ No `tsconfig.json`, dentro do ojeto `"compilerOptions":{}`, no final do objeto i
     ],
     "esModuleInterop": true
 ```
-A configuração do arquivo `tsconfig.spec.ts`, dentro do objeto `"compilerOptions":{}` o `"types"` vai estar com o valor default do momento da criação do projeto `jasmine`. Altere para `jest`.
+A configuração do arquivo `tsconfig.spec.ts`, dentro do objeto `"compilerOptions":{}` o `"types"` vai estar com o valor padrão do momento da criação do projeto `jasmine`. Altere para `jest`.
 ```json
     "types": [
       "jest"
@@ -66,13 +66,13 @@ A configuração do arquivo `package.json` é simples. Dentro do objeto `"script
      "test": "jest --no-cache --coverage",
      "test:watch": "jest --no-cache --watchAll "
 
-o `--coverage` é para criar um report para mostrar onde em quais funções os testes estão passando, e a porcentagem de cobertura. Via a imagem abaixo:
+o `--coverage` é para criar um report para mostrar quais as funções, os testes estão passando/ou não, e a porcentagem de cobertura. Veja a imagem abaixo:
 
 ### screen
 1 - Mostrado o Relatório no browser - Por esse relatório, você consegui navegar dentro de arquivo de seu projeto, e verificar quais funções estão sendo coberto pelo teste. 
 <img src="src\assets\img\screen-1.png" width="100%">
 
-2 - Neste relatório que mostra no termial onde esta rodando o teste, você tem uma prévia de quantos, para saber se todos os testes passaram, e também a porcentagem de de cada arquivo.
+2 - Neste relatório que mostra no termial onde esta rodando o teste, você tem uma prévia para saber quantos testes passaram/ou quantos deram erro. E consegui ver também a porcentagem de cada arquivo.
 <img src="src\assets\img\screen-2.png" width="100%">
 
 <h1 align="center">💻 Desenvolvido Por: Gilberto Júnior</h1>
