@@ -10,20 +10,25 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    const component = fixture.componentInstance;
+    expect(component).toBeTruthy();
   });
 
   it(`should have as title 'config-angular-testing-jest'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('config-angular-testing-jest');
+    const component = fixture.componentInstance;
+    expect(component.title).toEqual('config-angular-testing-jest');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('config-angular-testing-jest app is running!');
+    const h1 = compiled.querySelector('h1');
+
+    expect(h1?.textContent).toContain(component.title);
   });
+
+
 });
