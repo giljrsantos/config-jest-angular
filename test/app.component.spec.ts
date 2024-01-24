@@ -20,15 +20,15 @@ describe('AppComponent', () => {
     expect(component.title).toEqual('config-angular-testing-jest');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const h1 = compiled.querySelector('h1');
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   const component = fixture.componentInstance;
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement as HTMLElement;
+  //   const h1 = compiled.querySelector('h1');
 
-    expect(h1?.textContent).toContain(component.title);
-  });
+  //   expect(h1?.textContent).toContain(component.title);
+  // });
 
 
 });

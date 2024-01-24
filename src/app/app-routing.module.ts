@@ -1,7 +1,18 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { CounterComponent } from './basic/counter/counter.component';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  {
+    path: 'basic/counter',
+    component: CounterComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'basic/counter'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
