@@ -34,7 +34,7 @@ describe('CounterComponent', () => {
     expect(component.counter).toBe(15);
   });
 
-  it('ao clicar no botão deve aumentar em 1', () => {
+  it('ao clicar no botão(+1) deve aumentar em 1', () => {
     const buttons = compiled.querySelectorAll('button');
     buttons[0].click();
     expect(component.counter).toBe(11);
