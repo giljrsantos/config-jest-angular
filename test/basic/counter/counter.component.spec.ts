@@ -21,7 +21,7 @@ describe('CounterComponent', () => {
     compiled = fixture.nativeElement;
   });
 
-  it('should create', () => {
+  it('deveria criar', () => {
     expect(component).toBeTruthy();
   });
 
