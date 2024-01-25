@@ -25,32 +25,28 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('debe de hacer match con el snapshot', () => {
+  it('deve corresponder ao snapshot', () => {
     expect(compiled).toMatchSnapshot();
   });
 
-  it('increaseBy(): debe de incrementar  basado en el argumento', () => {
+  it('increaseBy(): deveria aumentar com base no argumento', () => {
     component.increaseBy(5);
     expect(component.counter).toBe(15);
   });
 
-  it('hacer click en los botone debe incrementar en 1', () => {
-
+  it('ao clicar no botão deve aumentar em 1', () => {
     const buttons = compiled.querySelectorAll('button');
     buttons[0].click();
     expect(component.counter).toBe(11);
 
   })
-  it('hacer click en los botone debe decrementar en 1', () => {
-
+  it('ao clicar no botão(-1) deve diminuir em 1', () => {
     const buttons = compiled.querySelectorAll('button');
-
     buttons[1].click();
     expect(component.counter).toBe(9);
-
   });
 
-  it('cambiar el counter debe de actualizar la etiqueta h1', () => {
+  it('alterar o contador deve atualizar a tag h1', () => {
     component.increaseBy(10);
     fixture.detectChanges()
     const h1 = compiled.querySelector('h1');
