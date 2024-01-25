@@ -29,7 +29,7 @@ describe('CounterComponent', () => {
     expect(compiled).toMatchSnapshot();
   });
 
-  it('increaseBy(): deveria aumentar com base no argumento', () => {
+  it('increaseBy(): deve aumentar com base no argumento', () => {
     component.increaseBy(5);
     expect(component.counter).toBe(15);
   });
