@@ -40,6 +40,7 @@ describe('CounterComponent', () => {
     expect(component.counter).toBe(11);
 
   })
+
   it('ao clicar no botão(-1) deve diminuir em 1', () => {
     const buttons = compiled.querySelectorAll('button');
     buttons[1].click();
