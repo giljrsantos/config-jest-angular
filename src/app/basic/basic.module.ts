@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
+import { CharizardComponent } from '@app/basic/charizard/charizard.component';
 import { CommonModule } from '@angular/common';
-import { CounterComponent } from './counter/counter.component';
-
-
+import { CounterComponent } from '@app/basic/counter/counter.component';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
-    CounterComponent
+    CounterComponent,
+    CharizardComponent
   ],
   imports: [
     CommonModule
