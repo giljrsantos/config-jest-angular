@@ -14,11 +14,11 @@ describe('PokemonService', () => {
     service = TestBed.inject(PokemonService);
   });
 
-  it('should be created', () => {
+  it('deveria criar', () => {
     expect(service).toBeTruthy();
   });
 
-  it('debe de tracer informacion de bulbasaur', (done) => {
+  it('deve trazer informações do bulbasaur', (done) => {
     service.getPokemon(1).subscribe({
       next: (pokemon) => {
         expect(pokemon.name).toBe('bulbasaur');
