@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FatherSonComponent deve aparecer 2 botões se tiver cliente no snapshot 1`] = `
+<div
+  id="root4"
+>
+  <h5>
+    Filho
+  </h5>
+  <code>
+    {
+  "id": 1,
+  "name": "Juan"
+}
+  </code>
+  <br />
+  <br />
+  <button
+    class="btn btn-outline-primary"
+    data-test="btn-id"
+  >
+     Mudar ID
+
+  </button>
+  
+  <button
+    class="btn btn-outline-danger"
+    data-test="btn-delete"
+  >
+     Apagar Cliente
+
+  </button>
+  
+</div>
+`;
+
+exports[`FatherSonComponent deve corresponder ao snapshot 1`] = `
+<div
+  id="root1"
+>
+  <h5>
+    Filho
+  </h5>
+  <code>
+    
+  </code>
+  <br />
+  <br />
+  
+  
+</div>
+`;
