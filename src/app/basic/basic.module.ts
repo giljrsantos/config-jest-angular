@@ -12,10 +12,8 @@ import { CounterRouteComponent } from './counter-route/counter-route.component';
     CharizardComponent,
     FatherComponent,
     FatherSonComponent,
-    CounterRouteComponent
+    CounterRouteComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class BasicModule { }
+export class BasicModule {}

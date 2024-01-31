@@ -1,2 +1,2 @@
-export * from './pokemon'
-export * from './client'
+export * from './pokemon';
+export * from './client';

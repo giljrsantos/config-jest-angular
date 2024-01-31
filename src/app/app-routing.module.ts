@@ -10,32 +10,32 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: 'basic/counter',
-    component: CounterComponent
+    component: CounterComponent,
   },
   {
     path: 'basic/counter/:initial',
-    component: CounterRouteComponent
+    component: CounterRouteComponent,
   },
   {
     path: 'basic/charizard',
-    component: CharizardComponent
+    component: CharizardComponent,
   },
   {
     path: 'basic/father',
-    component: FatherComponent
+    component: FatherComponent,
   },
   {
     path: 'basic/father-son',
-    component: FatherSonComponent
+    component: FatherSonComponent,
   },
   {
     path: '**',
-    redirectTo: 'basic/counter'
-  }
+    redirectTo: 'basic/counter',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

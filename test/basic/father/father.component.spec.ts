@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
 
 import { By } from '@angular/platform-browser';
 import { FatherComponent } from '../../../src/app/basic/father/father.component';
@@ -11,8 +14,8 @@ describe('FatherComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FatherComponent, FatherSonComponent]
-    }).compileComponents()
+      declarations: [FatherComponent, FatherSonComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -41,11 +44,14 @@ describe('FatherComponent', () => {
   });
 
   it('deve excluir o cliente se ele for emitido onDeleteClient (Filho)', () => {
-    component.client = { id: 1, name: 'Eduardo' }
+    component.client = { id: 1, name: 'Eduardo' };
     fixture.detectChanges();
 
-    const sonDebugElement = fixture.debugElement.query(By.directive(FatherSonComponent));
-    const sonComponent: FatherSonComponent = sonDebugElement.componentInstance;
+    const sonDebugElement = fixture.debugElement.query(
+      By.directive(FatherSonComponent),
+    );
+    const sonComponent: FatherSonComponent =
+      sonDebugElement.componentInstance;
 
     sonComponent.onDeleteClient.emit();
     expect(component.client).toBe(undefined);
@@ -55,11 +61,19 @@ describe('FatherComponent', () => {
     component.client = { id: 10, name: 'Eduardo' };
     fixture.detectChanges();
 
-    const sonDebugElement = fixture.debugElement.query(By.directive(FatherSonComponent));
-    const sonComponet: FatherSonComponent = sonDebugElement.componentInstance;
+    const sonDebugElement = fixture.debugElement.query(
+      By.directive(FatherSonComponent),
+    );
+    const sonComponet: FatherSonComponent =
+      sonDebugElement.componentInstance;
 
-    sonComponet.onClientUpdated.emit({ id: 10, name: 'Pedro' });
-    expect(component.client).toEqual({ id: 10, name: 'Pedro' });
+    sonComponet.onClientUpdated.emit({
+      id: 10,
+      name: 'Pedro',
+    });
+    expect(component.client).toEqual({
+      id: 10,
+      name: 'Pedro',
+    });
   });
-
 });

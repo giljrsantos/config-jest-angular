@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
 
 import { CounterComponent } from '../../../src/app/basic/counter/counter.component';
 
@@ -9,10 +12,9 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CounterComponent]
-    })
-      .compileComponents();
-  })
+      declarations: [CounterComponent],
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CounterComponent);
@@ -38,8 +40,7 @@ describe('CounterComponent', () => {
     const buttons = compiled.querySelectorAll('button');
     buttons[0].click();
     expect(component.counter).toBe(11);
-
-  })
+  });
 
   it('ao clicar no botão(-1) deve diminuir em 1', () => {
     const buttons = compiled.querySelectorAll('button');
@@ -49,8 +50,8 @@ describe('CounterComponent', () => {
 
   it('alterar o contador deve atualizar a tag h1', () => {
     component.increaseBy(10);
-    fixture.detectChanges()
+    fixture.detectChanges();
     const h1 = compiled.querySelector('h1');
-    expect(h1?.textContent).toContain('20')
-  })
+    expect(h1?.textContent).toContain('20');
+  });
 });

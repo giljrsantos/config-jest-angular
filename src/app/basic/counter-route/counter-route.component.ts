@@ -4,18 +4,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-counter-route',
   templateUrl: './counter-route.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class CounterRouteComponent {
   public counter: number = 0;
 
-  constructor(
-    private route: ActivatedRoute
-  ) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    const initialValue = Number(this.route.snapshot.paramMap.get('initial'));
+    const initialValue = Number(
+      this.route.snapshot.paramMap.get('initial'),
+    );
     this.counter = isNaN(initialValue) ? 10 : initialValue;
   }
 
