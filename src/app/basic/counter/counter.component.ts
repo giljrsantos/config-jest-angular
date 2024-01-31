@@ -17,9 +17,6 @@ export class CounterComponent implements OnInit {
 
   increaseBy(value: number) {
     this.counter += value;
-
-    // TODO
-    // console.log({ newValue: this.counter })
   }
 
 }
